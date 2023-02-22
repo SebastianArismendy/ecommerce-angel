@@ -1,46 +1,66 @@
-import React from 'react';
-import { Button, Card} from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Button, Card } from 'react-bootstrap';
 import { useThemeHook } from '../GlobalComponents/ThemeProvider';
 import { useCart } from 'react-use-cart';
 import { BsCartPlus } from 'react-icons/bs';
-import { Link } from  "@reach/router";
+import { Link } from "@reach/router";
+import '../assets/css/ProductCard/style.css';
+import Toast from 'react-bootstrap/Toast';
+import ToastContainer from 'react-bootstrap/ToastContainer';
 
 const ProductCard = (props) => {
-    let { image, price, title, id} = props.data;
+    let { image, price, title, id } = props.data;
     const [theme] = useThemeHook();
     const { addItem } = useCart();
+    const [show, setShow] = useState(false);
 
-    const addToCart = () =>{
+    const addToCart = () => {
         addItem(props.data);
+        setShow(true);
     }
     return (
-        <Card 
-            style={{ width: '18rem', height: 'auto' }}
-            className={`${theme? 'bg-light-black text-light':'bg-lihgt text-black'} text-center p-0 overflow-hidden shadow mx-auto mb-4`}
+        <Card
+            style={{ backgroundColor: 'transparent', borderColor: 'transparent', width: '17rem', height: 'auto' }}
+            className={`${theme ? 'text-light' : 'text-black'} mx-auto mb-1`}
         >
-            <Link to={`/product-details/${id}`}>
-                <div style={{ background: 'white', height: '15rem', overflow: 'hidden', display: 'flex',
-                justifyContent: 'center', alignItems: 'center', marginBottom: 'inherit' }}>
-                    <div style={{ width: '9rem'}}>
-                        <Card.Img variant="top" src={image} className="img-fluid" />
-                    </div>
+            <Card.Body >
+                <div className='productCard__container'>
+                    <Link to={`/product-details/${id}`}>
+                        <div className='productCard__container-img'>
+                            <div style={{ width: '9rem' }}>
+                                <Card.Img variant="top" src={image} className="img-fluid" />
+                            </div>
+                        </div>
+                    </Link>
+                    <Button
+                        onClick={() => addToCart()}
+                        className='productCard__container-button align-item-center m-auto border-0'
+                    >
+                        <BsCartPlus size="1.8rem" /> Agregar
+                    </Button>
                 </div>
-            </Link>
-            <Card.Body>
-                <Card.Title style={{ textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap'}}>
+                <Card.Title style={{ color: '#666', fontSize: '18px', textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }}>
                     {title}
                 </Card.Title>
-                <Card.Title>
-                    Rs. <span className="h3">{price}</span>
+                <Card.Title style={{ fontSize: '22px' }}>
+                    $<span style={{ fontSize: '22px' }} className="h3">{price}</span>
                 </Card.Title>
-                <Button
-                    onClick={()=> addToCart()}
-                    className={`${theme? 'bg-dark-primary text-black':'bg-light-primary' } d-flex align-item-center m-auto border-0`}
-                >
-                    <BsCartPlus size="1.8rem" />
-                    Add to cart
-                </Button>
+
             </Card.Body>
+            <ToastContainer className='add-cart'>
+                <Toast onClose={() => setShow(false)} show={show} delay={2000} autohide bg={'Info'}>
+                    <Toast.Header>
+                        <img
+                            src="holder.js/20x20?text=%20"
+                            className="rounded me-2"
+                            alt=""
+                        />
+                        <strong className="me-auto">Agregado al carrito de compras</strong>
+                        <small>justo ahora</small>
+                    </Toast.Header>
+                    <Toast.Body>Producto agregado al carrito!</Toast.Body>
+                </Toast>
+            </ToastContainer>
         </Card>
     );
 };

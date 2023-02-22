@@ -3,6 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useThemeHook } from './GlobalComponents/ThemeProvider';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import { Router } from "@reach/router";
 
 //Pages
@@ -17,7 +18,7 @@ import MyAccount from "./Pages/MyAccount";
 function App() {
   const [theme] = useThemeHook();
   return (
-    <main className={theme? 'bg-black': 'bg-light-2'} style={{ height: '100vh', overflowY: 'auto'}}>
+    <main className={theme? 'bg-black': 'bg-light'} style={{ height: '100vh', overflowY: 'auto'}}>
       <Header/>
       <Router>
         <Home path="/" />
@@ -27,6 +28,7 @@ function App() {
         <ProductDetails path="product-details/:productId"/>
         <Cart path="/cart" />
       </Router>
+      <Footer/>
     </main>
   );
 }

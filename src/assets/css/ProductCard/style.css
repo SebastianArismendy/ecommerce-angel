@@ -1,0 +1,39 @@
+.productCard__container{
+    position: relative;
+    margin-bottom: 16px;
+    box-shadow: -2px -1px 23px 0px rgb(237 237 237)
+}
+
+.productCard__container-img{
+    background: white;
+    height: 15rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: inherit;
+}
+.productCard__container-button{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111111;
+    opacity: 0;
+    transition: opacity 0.5s ease-out 100ms
+}
+.productCard__container-button:hover{
+    background-color: #111111c8;
+}
+
+.productCard__container:hover .productCard__container-button{
+    opacity: 1;
+}
+
+.add-cart{
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+}

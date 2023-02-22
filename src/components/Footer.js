@@ -48,15 +48,11 @@ const Footer = () => {
 
                     <ul className="nav__ul">
                         <li>
-                            <a href="#">Privacy Policy</a>
+                            <a href="#">Política de privacidad</a>
                         </li>
 
                         <li>
-                            <a href="#">Terms of Use</a>
-                        </li>
-
-                        <li>
-                            <a href="#">Sitemap</a>
+                            <a href="#">Términos y condiciones</a>
                         </li>
                     </ul>
                 </li>

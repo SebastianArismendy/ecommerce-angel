@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { useThemeHook } from '../GlobalComponents/ThemeProvider';
 import { useCart } from 'react-use-cart';
-import { BsCartPlus } from 'react-icons/bs';
+import { MdOutlineAddShoppingCart } from 'react-icons/md';
 import { Link } from "@reach/router";
 import '../assets/css/ProductCard/style.css';
 import Toast from 'react-bootstrap/Toast';
@@ -36,7 +36,7 @@ const ProductCard = (props) => {
                         onClick={() => addToCart()}
                         className='productCard__container-button align-item-center m-auto border-0'
                     >
-                        <BsCartPlus size="1.8rem" /> Agregar
+                        <MdOutlineAddShoppingCart size="1.8rem" /> Agregar
                     </Button>
                 </div>
                 <Card.Title style={{ color: '#666', fontSize: '18px', textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }}>

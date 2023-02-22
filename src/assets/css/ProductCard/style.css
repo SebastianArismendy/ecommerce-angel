@@ -1,7 +1,9 @@
 .productCard__container{
     position: relative;
     margin-bottom: 16px;
-    box-shadow: -2px -1px 23px 0px rgb(237 237 237)
+    box-shadow: -2px -1px 23px 0px rgb(237 237 237);
+    border-radius: 25px;
+
 }
 
 .productCard__container-img{
@@ -12,6 +14,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: inherit;
+    border-radius: 25px;
 }
 .productCard__container-button{
     position: absolute;
@@ -20,12 +23,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #111111;
+    background-color: #111111c8;
     opacity: 0;
-    transition: opacity 0.5s ease-out 100ms
+    transition: opacity 0.3s ease-out 100ms
 }
 .productCard__container-button:hover{
-    background-color: #111111c8;
+    background-color: #111111;
 }
 
 .productCard__container:hover .productCard__container-button{

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, InputGroup, FormControl } from 'react-bootstrap';
 import { useThemeHook } from '../GlobalComponents/ThemeProvider';
-import { BiSearch } from 'react-icons/bi';
+import { MdSearch } from 'react-icons/md';
 import SearchFilter from 'react-filter-search';
 import ProductCard from '../components/ProductCard';
 import Carrousel from '../components/Carrousel';
@@ -28,7 +28,7 @@ const Home = () => {
                 <Row className="justify-content-center">
                     <Col className="mb-3 mx-auto text-center">
                         <h2 className='text-black my-5'>Buscar productos</h2>
-                        <InputGroup className="mb-3">
+                        <InputGroup className="mb-">
 
                             <FormControl
                                 placeholder="Busca tus productos"
@@ -37,7 +37,7 @@ const Home = () => {
                                 className={theme ? 'bg-light-black text-light' : 'bg-light text-black'}
                             />
                             <InputGroup.Text className='bg-light .text-dark'>
-                                <BiSearch size="2rem" />
+                                <MdSearch size="2rem" />
                             </InputGroup.Text>
                         </InputGroup>
                     </Col>

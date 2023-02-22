@@ -1,11 +1,12 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { Container, Navbar, Nav,Image } from 'react-bootstrap';
+import { Container, Navbar, Nav, Image } from 'react-bootstrap';
 import { ThemeContext } from '../GlobalComponents/ThemeProvider';
-import { BiSun, BiMoon, BiCart } from 'react-icons/bi';
+import { MdOutlineShoppingCart } from 'react-icons/md';
 import { VscAccount } from 'react-icons/vsc';
 import { Link } from "@reach/router";
 import { useCart } from "react-use-cart";
 import Logo from '../images/logo.jpeg';
+import { AiOutlineUser } from 'react-icons/ai';
 
 const Header = () => {
   const { theme, setThemeMode } = useContext(ThemeContext);
@@ -23,16 +24,16 @@ const Header = () => {
 
   return (
     <Navbar collapseOnSelect expand="md"
-      variant={darkMode ? 'dark' : 'light'}
-      className={darkMode ? 'bg-light-black border-bottom' : 'bg-light border-bottom'}
+      variant='dark'
+      className='bg-black'
       style={{ width: '100%', position: 'fixed', zIndex: 100 }}
     >
       <Container>
         <Link to="/">
-          <Navbar.Brand className={darkMode ? 'text-dark-primary' : 'text-light-primary'}>
+          <Navbar.Brand>
             <Image
               src={Logo}
-              
+
               className="footer__logo p-0"
             />
           </Navbar.Brand>
@@ -40,26 +41,21 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Link to="sign-in" className={`nav-link ${darkMode ? 'text-dark-primary' : 'text-light-primary'}`}>
-              Sign in
+            <Link to="sign-in" className='nav-link text-light'>
+              <AiOutlineUser size="1.8rem" />
+              Iniciar sesión
             </Link>
-            {/* <Nav.Link
-              className={darkMode ? 'text-dark-primary' : 'text-light-primary'}
-              onClick={() => setDarkMode(!darkMode)}
-            >
-              {darkMode ? <BiSun size="1.7rem" /> : <BiMoon size="1.7rem" />}
-            </Nav.Link> */}
+            <Link to="my-account" className='nav-link text-light'>
+              <VscAccount size="1.8rem" />
+              &nbsp;Mi cuenta
+            </Link>
             <Link
               to="/cart"
-              className={`${darkMode ? 'text-dark-primary' : 'text-light-primary'} d-flex align-items-center`}
+              className='nav-link text-light d-flex align-items-center'
             >
-              <BiCart size="2rem" />
+              <MdOutlineShoppingCart size="2rem" />
               {!isEmpty && <span style={{ position: 'relative', left: '-21px', top: '-18px' }}>{totalItems}</span>}
-              <span style={{ marginLeft: !isEmpty ? '-13px' : 0 }}>&nbsp;Cart</span>
-            </Link>
-            <Link to="my-account" className={`nav-link ${darkMode ? 'text-dark-primary' : 'text-light-primary'}`}>
-              <VscAccount size="1.8rem" />
-              &nbsp;My Account
+              <span style={{ marginLeft: !isEmpty ? '-13px' : 0 }}>&nbsp;Carrito</span>
             </Link>
           </Nav>
         </Navbar.Collapse>

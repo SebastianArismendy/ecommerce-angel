@@ -21,7 +21,7 @@ const Cart = () => {
 
             <div className='jumbotron'>
                 <h1 className={`${theme ? 'text-light' : 'text-dark'} my-5 text-center title `}>
-                    {isEmpty ? 'Your Cart is Empty' : 'Cart'}
+                    {isEmpty ? 'Tu carrito esta vacío' : 'Carrito'}
                 </h1>
             </div>
             <Container className="mt-5">

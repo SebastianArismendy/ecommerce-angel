@@ -1,0 +1,35 @@
+.container-font {
+
+    margin: 100px;
+    width: 550px;
+    border-radius: 0.3rem;
+    text-align: left;
+}
+
+.fondo {
+    background: white;
+}
+
+.title {
+    font-size: 20px;
+    line-height: 26px;
+    color: #232323;
+    margin-bottom: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.form-container {
+    background-color: #F8F9F9 !important;
+    padding: 55px;
+}
+
+.button-tm {
+    width: 100%;
+    margin: 10px 0;
+}
+
+a, a:focus {
+    color: #808080;
+    text-decoration: underline;
+}

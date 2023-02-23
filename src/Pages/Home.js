@@ -27,7 +27,7 @@ const Home = () => {
             <Container>
                 <Row className="justify-content-center">
                     <Col className="mb-3 mx-auto text-center">
-                        <h2 className='text-black my-5'>Buscar productos</h2>
+                        <h2 className='text-black my-5'>Productos</h2>
                         <InputGroup className="mb-">
 
                             <FormControl

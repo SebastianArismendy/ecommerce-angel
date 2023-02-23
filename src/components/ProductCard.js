@@ -18,6 +18,7 @@ const ProductCard = (props) => {
         addItem(props.data);
         setShow(true);
     }
+    
     return (
         <Card
             style={{ backgroundColor: 'transparent', borderColor: 'transparent', width: '17rem', height: 'auto' }}
@@ -48,7 +49,7 @@ const ProductCard = (props) => {
 
             </Card.Body>
             <ToastContainer className='add-cart'>
-                <Toast onClose={() => setShow(false)} show={show} delay={2000} autohide bg={'Info'}>
+                <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide bg={'dark'}>
                     <Toast.Header>
                         <img
                             src="holder.js/20x20?text=%20"
@@ -58,10 +59,11 @@ const ProductCard = (props) => {
                         <strong className="me-auto">Agregado al carrito de compras</strong>
                         <small>justo ahora</small>
                     </Toast.Header>
-                    <Toast.Body>Producto agregado al carrito!</Toast.Body>
+                    <Toast.Body className='text-light'>Producto agregado al carrito!</Toast.Body>
                 </Toast>
             </ToastContainer>
         </Card>
+        
     );
 };
 

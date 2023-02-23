@@ -3,12 +3,13 @@
 }
 
 .lightbox-container .lightbox-img-thumbnail{
-    width: 17% !important;
+    width: 19% !important;
     height: auto !important;
     display: inline-block;
     float: left;
-    border: 1px solid #505050;
-    padding: 5px;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 15px;
     background-color: white;
 }
 .lightbox-backdrop.hide-controls div{
@@ -26,4 +27,39 @@
     .product-details.text-light{
         border-left: 1px solid #fcbc7365;
     }
+}
+
+.slick-prev{
+    height: 25px;
+    width: 25px;
+}
+
+.slick__container .slick-prev:before,.slick__container .slick-next:before{
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .lightbox-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .lightbox-container .lightbox-img-thumbnail:first-child{
+        width: 80% !important;
+    }
+    .lightbox-container .lightbox-img-thumbnail{
+        width: 25%!important;
+    }
+    .lightbox__container{
+        margin-bottom: 15px;
+    }
+
+    .slick__container .slick-prev{
+        left:0;
+    }
+    .slick__container.slick-next{
+        right:0;
+    }
+    
 }

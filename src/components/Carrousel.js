@@ -1,14 +1,15 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import fondo from '../images/banner.webp';
+import '../assets/css/Carousel/style.css';
+
 
 const Carrousel = (props) => {
     return (
-        <Carousel style={{ marginTop: '72px' }}>
-            <Carousel.Item interval={100000}>
+        <Carousel  style={{ marginTop: '72px' }}>
+            <Carousel.Item interval={3000}>
                 <img
-                    className="d-block w-100"
-                    style={{ height: '550px', objectFit: 'cover', objectPosition: 'top' }}
+                    className="carousel__img d-block w-100"
                     src={fondo}
                     alt="First slide"
                 />
@@ -21,8 +22,7 @@ const Carrousel = (props) => {
             </Carousel.Item>
             <Carousel.Item interval={3000}>
                 <img
-                    className="d-block w-100"
-                    style={{ height: '550px', objectFit: 'cover', objectPosition: 'top' }}
+                    className="carousel__img d-block w-100"
                     src={fondo}
                     alt="Second slide"
                 />
@@ -35,8 +35,7 @@ const Carrousel = (props) => {
             </Carousel.Item>
             <Carousel.Item interval={3000}>
                 <img
-                    className="d-block w-100"
-                    style={{ height: '550px', objectFit: 'cover', objectPosition: 'top' }}
+                    className="carousel__img d-block w-100"
                     src={fondo}
                     alt="Third slide"
                 />

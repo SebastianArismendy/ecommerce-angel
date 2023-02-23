@@ -31,12 +31,18 @@
     background-color: #111111;
 }
 
+@media (max-width: 768px) {
+    .productCard__container-button {
+       opacity: 1;
+    }
+}
+
 .productCard__container:hover .productCard__container-button{
     opacity: 1;
 }
 
 .add-cart{
     position: fixed;
-    bottom: 5%;
-    left: 5%;
+    top: 12%;
+    right: 5%;
 }

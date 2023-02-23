@@ -45,10 +45,10 @@ const Header = () => {
               <AiOutlineUser size="1.8rem" />
               Iniciar sesión
             </Link>
-            <Link to="my-account" className='nav-link text-light'>
+            {/* <Link to="my-account" className='nav-link text-light'>
               <VscAccount size="1.8rem" />
               &nbsp;Mi cuenta
-            </Link>
+            </Link> */}
             <Link
               to="/cart"
               className='nav-link text-light d-flex align-items-center'

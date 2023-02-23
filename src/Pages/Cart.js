@@ -20,7 +20,7 @@ const Cart = () => {
 
 
             <div className='jumbotron'>
-                <h1 className={`${theme ? 'text-light' : 'text-dark'} my-5 text-center title `}>
+                <h1 className={`${theme ? 'text-light' : 'text-dark'} my-5 text-center title-cart `}>
                     {isEmpty ? 'Tu carrito esta vacío' : 'Carrito'}
                 </h1>
             </div>
@@ -61,7 +61,7 @@ const Cart = () => {
                                         <td>${item.price}</td>
                                         <td>
                                             <div>
-                                                Quantity ({item.quantity})
+                                                Cantidad ({item.quantity})
                                                 <Button onClick={() => updateItemQuantity(item.id, item.quantity - 1)} variant="outline-dark ms-2">-</Button>
                                                 <Button onClick={() => updateItemQuantity(item.id, item.quantity + 1)} variant="outline-dark ms-2">+</Button>
                                             </div>
@@ -87,7 +87,7 @@ const Cart = () => {
                                             <td>$ {cartTotal}</td>
                                         </tr>
                                         <tr>
-                                            <td>Total Price</td>
+                                            <td>Precio total:</td>
                                             <td>$ {cartTotal}</td>
                                         </tr>
 
@@ -96,12 +96,12 @@ const Cart = () => {
                                 <div class="btn-group btn-group-lg button-group">
                                     <Button variant="btn btn-dark" className="m-2" onClick={() => emptyCart()}>
                                         <BsCartX size="1.7rem" />
-                                        Clear Cart
+                                        Limpiar carrito
                                     </Button>
 
                                     <Button variant="btn btn-dark" className="m-2">
                                         <BsCartCheck size="1.7rem" />
-                                        Proceed to checkout
+                                        Pasar al checkout
                                     </Button>
                                 </div>
                             </div>

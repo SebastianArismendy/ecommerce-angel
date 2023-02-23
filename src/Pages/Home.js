@@ -11,10 +11,10 @@ const Home = () => {
     const [searchInput, setSearchInput] = useState('');
     const [productData, setProductData] = useState([]);
 
-    async function getResponse() {
-        const res = await fetch('https://fakestoreapi.com/products')
-            .then(res => res.json());
-        setProductData(await res);
+    async function getResponse(){
+        const res = await fetch('https://fakestoreapi.com/products',{mode: 'cors'})
+                          .then(res=> res.json());
+                          setProductData(await res);
     }
 
     useEffect(() => {

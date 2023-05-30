@@ -13,13 +13,13 @@ const Footer = () => {
                     className="footer__logo p-0"
                 />
                 <h2>Contact</h2>
-                <email><AiFillMail size="1.4rem" /> sebax1502@gmail.com</email>
+                <span><AiFillMail size="1.4rem" /> sebax1502@gmail.com</span>
                 <address>
                     <BsFillPinFill size="1.4rem" />Cra. 52 #48-45, La Candelaria
                 </address>
-                <phone>
+                <span>
                     <AiFillPhone size="1.4rem" /> +57 3045864289
-                </phone>
+                </span>
             </div>
 
             <ul className="footer__nav">

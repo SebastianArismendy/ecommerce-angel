@@ -11,6 +11,13 @@ const Home = () => {
     const [searchInput, setSearchInput] = useState('');
     const [productData, setProductData] = useState([]);
 
+    async function getResponseNode(){
+        const res = await fetch('http://localhost/api/students')
+            .then(res=> res.json());
+            // setProductData(await res);
+        console.log(res)
+    }
+
     async function getResponse(){
         const res = await fetch('https://fakestoreapi.com/products',{mode: 'cors'})
                           .then(res=> res.json());
@@ -19,6 +26,7 @@ const Home = () => {
 
     useEffect(() => {
         getResponse();
+        getResponseNode();
     }, []);
 
     return (

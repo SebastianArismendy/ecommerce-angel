@@ -4,6 +4,7 @@ const ThemeContext = createContext();
 
 const ThemeProvider = (props) => {
     const [theme, setTheme] = useState(JSON.parse(localStorage.getItem('theme')) || false );
+    const [login, setLogin] = useState(false);
     
     useEffect(()=>{
         localStorage.setItem('theme', JSON.stringify(theme));

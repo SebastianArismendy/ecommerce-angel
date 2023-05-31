@@ -3,10 +3,12 @@ import { Admin, Resource } from 'react-admin';
 import {ClientList,ClientEdit,ClientCreate} from './Cliente/Client'
 import {DirectionList,DirectionCreate,DirectionEdit} from './Direccion/Direction'
 import {ProductList,ProductCreate,ProductEdit} from './Producto/product'
-
+import './Admin.css';
 import { MdSupervisorAccount,MdDirections,MdCategory,MdAllInbox } from 'react-icons/md';
 import { AiTwotoneTags,AiTwotoneNotification,AiTwotoneTag } from "react-icons/ai";
 import fakeDataProvider from 'ra-data-fakerest';
+import  {iProvider} from './LenguageProvider';
+
 
 const dataProvider = fakeDataProvider({
   clientes: [ { 
@@ -79,8 +81,8 @@ const App = () => {
     }, []);
 
     return (
-      <div style={{marginTop: '76px'}}>
-        <Admin dataProvider={dataProvider}>
+      <div style={{marginTop: '48px'}}>
+        <Admin dataProvider={dataProvider} locale="es"   i18nProvider={iProvider}>
           {/* <Resource name="Ventas" icon={AiTwotoneTag} list={ClientList} edit={ClientEdit} create={ClientCreate} /> */}
           <Resource name="clientes" icon={MdSupervisorAccount} list={ClientList} edit={ClientEdit} create={ClientCreate} recordRepresentation="correo_electronico"/>
           <Resource name="direcciones" icon={MdDirections}  list={DirectionList} edit={DirectionEdit} create={DirectionCreate}  />

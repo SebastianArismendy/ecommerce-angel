@@ -1,0 +1,61 @@
+.css-1n2f7rh-RaLayout-root .RaLayout-appFrame{
+    background-color: #16181a;
+    margin-top: 0!important;
+}
+
+.css-uwxfgq-MuiPaper-root-MuiAppBar-root-RaAppBar-root{
+    background-color: black!important;
+}
+.css-krc73u-MuiButtonBase-root-MuiMenuItem-root-RaMenuItemLink-root .RaMenuItemLink-icon,
+.css-krc73u-MuiButtonBase-root-MuiMenuItem-root-RaMenuItemLink-root{
+    color: white!important;
+}
+
+.css-krc73u-MuiButtonBase-root-MuiMenuItem-root-RaMenuItemLink-root.RaMenuItemLink-active{
+    color: white!important;
+    text-decoration: underline;
+}
+
+.css-f5d03y-MuiButtonBase-root-MuiButton-root-RaButton-root-RaCreateButton-root{
+    color: green!important;
+}
+.MuiTablePagination-selectLabel{
+    font-size: 0!important;
+}
+
+.MuiTablePagination-selectLabel::after{
+    content: 'Filas por página';
+    font-size: 0.875rem;
+}
+
+.css-1n2f7rh-RaLayout-root .RaLayout-content{
+    padding-right: 20px!important;
+    padding-left: 20px!important;
+}
+
+.MuiButton-textSizeSmall.add-filter{
+    color: black!important;
+}
+
+.css-blmy2t-MuiTableCell-root,.css-kp6q86-MuiTableCell-root-RaDatagridHeaderCell-root,
+.css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root.Mui-active,
+.css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root.Mui-active .MuiTableSortLabel-icon,
+.css-14mup8f-RaDatagrid-root .RaDatagrid-headerCell,.select-all{
+    background-color: #16181a!important;
+    color: white!important;
+}
+
+.css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root:hover{
+    color: white!important;
+    opacity: 0.8;
+}
+
+.css-14mup8f-RaDatagrid-root .RaDatagrid-checkbox{
+    color: #16181a;
+}
+
+@media screen and (max-width: 768px) {
+    .css-44ws7n-MuiModal-root-MuiDrawer-root-RaSidebar-root .MuiPaper-root{
+        background-color: black!important;
+    }
+}
